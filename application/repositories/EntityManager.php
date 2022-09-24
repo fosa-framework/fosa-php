@@ -23,7 +23,7 @@
             try {
                 $this->connection = new \PDO("mysql:host=localhost:3306;dbname={$this->database}", $this->username, $this->password);
                 if(!$this->connection) {
-                    echo "Impossible de se connecter à la base de données!";
+                    die("Warning: Unable to connect to the database.");
                 } else {
                     $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
                 }

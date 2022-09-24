@@ -15,12 +15,14 @@ class Template
 
     public function __construct() {}
 
-    public function render($template, $data, $locale = 'en-EN')
+    public function render($template, $data, $locale = NULL)
     {
         if(self::template_exist($template))
         {
-            $this->locale = $locale;
-            $this->translation = (new Locale($locale))->load($template);
+            if(!is_null($locale)) {
+                $this->locale = $locale;
+                $this->translation = (new Locale($locale))->load($template);
+            }
             require_once dirname(dirname(__FILE__)) . '/templates/' . $template . '.template.php';
             return true;
         } else {

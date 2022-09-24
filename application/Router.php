@@ -154,7 +154,7 @@ class Router
 
         $response->view('404', [
             'method' => $request->getMethod(),
-            'path' => $request->getPath()
+            'path' => $request->getPath(),
         ]);
     }
 

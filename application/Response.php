@@ -14,7 +14,7 @@ class Response
     {
     }
 
-    public function view($template, $data, $locale)
+    public function view($template, $data, $locale = NULL)
     {
         return (new Template())->render($template, $data, $locale);
     }
