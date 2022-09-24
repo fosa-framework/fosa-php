@@ -1,0 +1,9 @@
+FROM php:7.4-cli
+
+WORKDIR /app
+
+ADD . /app
+
+EXPOSE 8085 8085
+
+CMD php -S 127.0.0.1:8085

@@ -1,0 +1,16 @@
+<?php
+require_once dirname(dirname(__FILE__)) . './application/DotEnv.php';
+
+use \Fosa\Application\DotEnv;
+
+(new DotEnv(dirname(dirname(__FILE__)) . '/.env'))->load();
+
+if(!defined('R_HOST')) define('R_HOST', getenv('R_HOST'));
+if(!defined('R_PORT')) define('R_PORT', getenv('R_PORT'));
+
+$server_log = shell_exec('php -S '. R_HOST .':' . R_PORT);
+
+if($server_log) {
+    echo $server_log;
+}
+exit(0);
