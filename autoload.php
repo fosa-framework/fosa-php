@@ -40,7 +40,6 @@ require_once __DIR__ . '/application/Email.php';
 require_once __DIR__ . '/application/repositories/EntityManager.php';
 require_once __DIR__ . '/application/repositories/Shark.php';
 require_once __DIR__. '/application/repositories/Repository.php';
-require_once __DIR__ . './application/repositories/TodoRepository.php';
 require_once __DIR__ . '/application/repositories/UserRepository.php';
 
 /* Controllers */

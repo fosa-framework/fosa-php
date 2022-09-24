@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0cc827c7-dec3-4e8b-84d5-50df51d11d03" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/run" beforeDir="false" afterPath="$PROJECT_DIR$/../server/run" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../autoload.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,15 +56,26 @@
       <file leaf-file-name="DotEnv.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../application/DotEnv.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204" />
+            <state relative-caret-position="183">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run" pinned="false" current-in-tab="true">
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../autoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../server/run">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="119">
+              <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -83,15 +94,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="326">
               <caret line="90" column="61" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../templates/app.template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="135" column="13" lean-forward="true" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -145,7 +147,6 @@
         <option value="$PROJECT_DIR$/../application/locales/en-EN/translation.php" />
         <option value="$PROJECT_DIR$/../application/locales/mg-MG/translation.php" />
         <option value="$PROJECT_DIR$/../application/Local.php" />
-        <option value="$PROJECT_DIR$/../autoload.php" />
         <option value="$PROJECT_DIR$/../application/Request.php" />
         <option value="$PROJECT_DIR$/../application/Controller.php" />
         <option value="$PROJECT_DIR$/../templates/app.template.php" />
@@ -162,6 +163,7 @@
         <option value="$PROJECT_DIR$/../templates/template-not-found.template.php" />
         <option value="$PROJECT_DIR$/../controllers/AppController.php" />
         <option value="$PROJECT_DIR$/../server/run" />
+        <option value="$PROJECT_DIR$/../autoload.php" />
       </list>
     </option>
   </component>
@@ -243,7 +245,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ap&#9;FILE&#9;file://E:/Bossy/Fosa/main/controllers/AppController.php&#10;Rou&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Router.php&#10;Respo&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;Res&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;loa&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;c&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/application/Config.php&#10;hta&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.htaccess&#10;.e&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.env" />
+    <property name="SearchEverywhereHistoryKey" value="aut&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;ap&#9;FILE&#9;file://E:/Bossy/Fosa/main/controllers/AppController.php&#10;Rou&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Router.php&#10;Respo&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;Res&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;loa&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;c&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/application/Config.php&#10;hta&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.htaccess&#10;.e&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.env" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -283,12 +285,12 @@
       <workItem from="1654707093424" duration="7000" />
       <workItem from="1654763984343" duration="67000" />
       <workItem from="1658295479216" duration="181000" />
-      <workItem from="1664003047310" duration="13839000" />
+      <workItem from="1664003047310" duration="14750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21487000" />
+    <option name="totallyTimeSpent" value="22398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -433,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="47" column="60" lean-forward="true" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -553,15 +548,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../application/DotEnv.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../server/run">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="119">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../application/DotEnv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
