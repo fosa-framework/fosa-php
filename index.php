@@ -6,7 +6,6 @@ use Fosa\Application\Router;
 use Fosa\Controllers\AppController;
 use Fosa\Controllers\ExampleController;
 use Fosa\Controllers\AuthController;
-use Fosa\Controllers\AdminController;
 use Fosa\Middlewares\TokenMiddleware;
 use Fosa\Middlewares\AuthBasicMiddleware;
 

@@ -20,6 +20,31 @@ php server/run
 
 Note : The server will run at `localhost` on port `8085` but you can change this by editing `R_HOST` and `R_PORT` in *.env* file in the root directory of your app.
 
+## Documentation
+
+### Controllers
+
+### Templates
+
+
+### Routing
+
+The routing configuration is in file `index.php` located in at the root project directory, you can easily register new route by using `Router` instance `$router` :
+
+```php
+...
+
+use Fosa\Controllers\MyFosaController;
+
+$router = new Router();
+
+/* WEB routes */
+$router->route('/my-fosa-controller', 'GET', MyFosaController::class);
+
+...
+```
+
+And the, you can access to your URL `http://localhost:8085/my-fosa-controller` .
 ## Issues
 
 Somme features are not ready in this beta version of the app, please tell us if you have an issue. And don't forget that Fosa is community open project.
