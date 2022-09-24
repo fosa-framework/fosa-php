@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc827c7-dec3-4e8b-84d5-50df51d11d03" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../templates/template-not-found.template.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../application/Template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../application/Template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,23 +18,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="204">
-                <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <first_editor relative-caret-position="391">
+                <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../application/repositories/EntityManager.php">
+      <file leaf-file-name="AppController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../controllers/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="306">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <folding>
+                <element signature="e#132#164#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +54,8 @@
       <file leaf-file-name="404.template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../templates/404.template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state relative-caret-position="326">
+              <caret line="90" column="61" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -86,8 +90,17 @@
       <file leaf-file-name="Template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../application/Template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-not-found.template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="90" column="106" selection-start-line="90" selection-start-column="106" selection-end-line="90" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -108,6 +121,8 @@
       <find>lang</find>
       <find>utils</find>
       <find>404</find>
+      <find>$data</find>
+      <find>$dat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,7 +147,6 @@
         <option value="$PROJECT_DIR$/../application/Local.php" />
         <option value="$PROJECT_DIR$/../autoload.php" />
         <option value="$PROJECT_DIR$/../application/Request.php" />
-        <option value="$PROJECT_DIR$/../controllers/AppController.php" />
         <option value="$PROJECT_DIR$/../application/Controller.php" />
         <option value="$PROJECT_DIR$/../templates/app.template.php" />
         <option value="$PROJECT_DIR$/../application/Locale.php" />
@@ -142,9 +156,11 @@
         <option value="$PROJECT_DIR$/../application/locales/fr-FR/translation.php" />
         <option value="$PROJECT_DIR$/../application/repositories/EntityManager.php" />
         <option value="$PROJECT_DIR$/../application/Response.php" />
-        <option value="$PROJECT_DIR$/../application/Template.php" />
         <option value="$PROJECT_DIR$/../application/Router.php" />
         <option value="$PROJECT_DIR$/../README.md" />
+        <option value="$PROJECT_DIR$/../application/Template.php" />
+        <option value="$PROJECT_DIR$/../templates/template-not-found.template.php" />
+        <option value="$PROJECT_DIR$/../controllers/AppController.php" />
       </list>
     </option>
   </component>
@@ -226,13 +242,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Rou&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Router.php&#10;Respo&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;Res&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;loa&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;c&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/application/Config.php&#10;hta&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.htaccess&#10;.e&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.env" />
+    <property name="SearchEverywhereHistoryKey" value="ap&#9;FILE&#9;file://E:/Bossy/Fosa/main/controllers/AppController.php&#10;Rou&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Router.php&#10;Respo&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;Res&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;loa&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;c&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/application/Config.php&#10;hta&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.htaccess&#10;.e&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.env" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Bossy\Fosa\main\templates" />
       <recent name="E:\Bossy\Fosa\main\application\locales\mg-MG" />
     </key>
   </component>
@@ -265,12 +282,12 @@
       <workItem from="1654707093424" duration="7000" />
       <workItem from="1654763984343" duration="67000" />
       <workItem from="1658295479216" duration="181000" />
-      <workItem from="1664003047310" duration="12588000" />
+      <workItem from="1664003047310" duration="13059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20236000" />
+    <option name="totallyTimeSpent" value="20707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -305,7 +322,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../autoload.php" />
     <entry file="file://$PROJECT_DIR$/../controllers/AppController.php" />
     <entry file="file://$PROJECT_DIR$/../templates/todos.template.php" />
     <entry file="file://$PROJECT_DIR$/../controllers/ExampleController.php" />
@@ -448,16 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../controllers/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" selection-start-line="10" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="e#132#164#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../application/locales/fr-FR/translation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -482,24 +488,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../templates/404.template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../application/Response.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../application/Template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -530,10 +522,41 @@
     <entry file="file://$PROJECT_DIR$/../README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <first_editor relative-caret-position="391">
+            <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/404.template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="90" column="61" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../application/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="90" column="106" selection-start-line="90" selection-start-column="106" selection-end-line="90" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../controllers/AppController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="e#132#164#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
