@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0cc827c7-dec3-4e8b-84d5-50df51d11d03" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/template-not-found.template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../templates/template-not-found.template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../autoload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="122">
+              <caret line="50" column="53" lean-forward="true" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-not-found.template.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="template-not-found.template.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="326">
-              <caret line="90" column="106" selection-start-line="90" selection-start-column="106" selection-end-line="90" selection-end-column="106" />
+              <caret line="90" column="158" selection-start-line="90" selection-start-column="158" selection-end-line="90" selection-end-column="158" />
             </state>
           </provider>
         </entry>
@@ -160,10 +160,10 @@
         <option value="$PROJECT_DIR$/../application/Router.php" />
         <option value="$PROJECT_DIR$/../README.md" />
         <option value="$PROJECT_DIR$/../application/Template.php" />
-        <option value="$PROJECT_DIR$/../templates/template-not-found.template.php" />
         <option value="$PROJECT_DIR$/../controllers/AppController.php" />
         <option value="$PROJECT_DIR$/../server/run" />
         <option value="$PROJECT_DIR$/../autoload.php" />
+        <option value="$PROJECT_DIR$/../templates/template-not-found.template.php" />
       </list>
     </option>
   </component>
@@ -285,12 +285,12 @@
       <workItem from="1654707093424" duration="7000" />
       <workItem from="1654763984343" duration="67000" />
       <workItem from="1658295479216" duration="181000" />
-      <workItem from="1664003047310" duration="14750000" />
+      <workItem from="1664003047310" duration="14883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22398000" />
+    <option name="totallyTimeSpent" value="22531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -302,8 +302,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Mongo Explorer" order="3" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" visible="true" weight="0.3297414" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" visible="true" weight="0.3297414" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
@@ -521,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="90" column="106" selection-start-line="90" selection-start-column="106" selection-end-line="90" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../controllers/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -564,8 +557,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="122">
+          <caret line="50" column="53" lean-forward="true" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="90" column="158" selection-start-line="90" selection-start-column="158" selection-end-line="90" selection-end-column="158" />
         </state>
       </provider>
     </entry>
