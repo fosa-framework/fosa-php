@@ -8,7 +8,7 @@ Fosa framework is free and open PHP based web framework build for endemic develo
 
 **Note:** Fosa requires `PHP:~5.4` and above.
 
-Use the `git clone` command to install to clone current repository or download directly source code. Release version will be updated soon.
+Use the `git clone` command to clone current repository or download directly source code. Release version will be updated soon.
 
 ## Launch
 
