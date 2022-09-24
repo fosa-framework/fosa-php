@@ -26,7 +26,7 @@ class Template
             require_once dirname(dirname(__FILE__)) . '/templates/' . $template . '.template.php';
             return true;
         } else {
-            self::render('not-found', [
+            self::render('template-not-found', [
                 'template' => $template . '.template.php'
             ]);
         }
