@@ -88,7 +88,7 @@
     </header>
     <main>
         <h1 class="error">Error 500 : Template not found</h1>
-        <p class="description">The template <code><?php echo $data['template']; ?></code> that you want to render in your Controller is not found in directory.</p>
+        <p class="description">The template <code><?php echo $data['template']; ?></code> that you want to render in your Controller is not found.</p>
     </main>
     <footer>
         <a href="#" target="_blank" rel="noreferrer"><i class="fab fa-github"></i>Fosa PHP Framework beta 0.1 2022</a>
