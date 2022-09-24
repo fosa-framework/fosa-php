@@ -23,9 +23,50 @@ Note : The server will run at `localhost` on port `8085` but you can change this
 ## Documentation
 
 ### Controllers
+The create a new controller, open the folder located at `controllers` and create a new PHP class file in. Then to configure the controller as shown in the bellow :
+
+```php
+namespace Fosa\Controllers;
+
+use Fosa\Application\Controller;
+use Fosa\Application\Request;
+use Fosa\Application\Response;
+
+class MyFosaController extends Controller
+{
+    public function __construct($method, Request $request, Response $response)
+    {
+        parent::__construct($method, $request, $response);
+    }
+
+    public function index(Request $request, Response $response)
+    {
+        return $response->view('fosa-template', [
+            'message' => 'Hello, World!',
+            'random' => 'Some data passed to the view.'
+        ]);
+    }
+}
+```
+
+Then, now we are going to create the view `fosa-template`.
 
 ### Templates
 
+View in Fosa Framework is located at `templates`. Templates are renderer by a class named `Template`, the class provides too some methods that will be usable in the template file. To create a new template, we are going to create a file named `fosa-template.template.php` :
+
+```php
+echo $data['message'];
+echo $data['random'];
+```
+
+All methods provided by the class `Template` are :
+
+| Methods        | Description           | Results  |
+| ------------- |:-------------:| -----:|
+| `get_locale()`      | Get the current locale. | `en-EN` or `fr-FR` |
+| `assets($dir, $name)`      | Get URL of assets located in `statics` folder.      |  `/statics/images/Fosa.png`  |
+| `render_locale($key)` | Return translated key based text located in `/application/locales/<locale>/translation.php`      |    `Welcome` or `Bienvenue` |
 
 ### Routing
 

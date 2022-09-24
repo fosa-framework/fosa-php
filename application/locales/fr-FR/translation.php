@@ -2,7 +2,7 @@
 
 $translation = [
     'app' => [
-        'title' => 'Bienvenu',
+        'title' => 'Bienvenue',
         'description' => 'Le framework Fosa est un framework Web gratuit et ouvert basé sur PHP pour les développeurs endémiques. Vous utilisez la version bêta 0.1 du framework.',
         'main' => [
             'title' => 'Bienvenue sur Fosa Framework !',
