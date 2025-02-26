@@ -31,7 +31,11 @@ class Request
     {
         $authorization = self::getHeaders()['Authorization'];
         if(!$authorization) return null;
-        return explode('Bearer ', $authorization)[1];
+        $exploded = explode(' ', $authorization);
+        if(count($exploded) !== 2) return null;
+        list($type, $token) = $exploded;
+        if(trim($type) !== 'Bearer' || strlen(trim($token)) === 0) return null;
+        return $token;
     }
 
     public function getBasicAuth()
@@ -71,7 +75,7 @@ class Request
             $body = $_POST;
         }
         if($key) {
-            if(is_object($body)) $body = $body->$key;
+            if(is_object($body)) $body = property_exists($body, $key) ? $body->$key : null;
             if(is_array($body)) $body = isset($body[$key]) ? $body[$key] : null;
         }
         return $body;
