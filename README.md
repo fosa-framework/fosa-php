@@ -41,7 +41,7 @@ class MyFosaController extends Controller
 
     public function index(Request $request, Response $response)
     {
-        return $response->view('fosa-template', [
+        return $response->view('fosa', [
             'message' => 'Hello, World!',
             'random' => 'Some data passed to the view.'
         ]);
@@ -49,11 +49,11 @@ class MyFosaController extends Controller
 }
 ```
 
-Then, now we are going to create the view `fosa-template`.
+Then, now we are going to create the view `fosa`.
 
 ### Templates
 
-View in Fosa Framework is located at `templates`. Templates are renderer by a class named `Template`, the class provides too some methods that will be usable in the template file. To create a new template, we are going to create a file named `fosa-template.template.php` :
+View in Fosa Framework is located at `templates`. Templates are renderer by a class named `Template`, the class provides too some methods that will be usable in the template file. To create a new template, we are going to create a file named `fosa.template.php` :
 
 ```php
 echo $data['message'];
@@ -80,6 +80,7 @@ use Fosa\Controllers\MyFosaController;
 $router = new Router();
 
 /* WEB routes */
+...
 $router->route('/my-fosa-controller', 'GET', MyFosaController::class);
 
 ...
