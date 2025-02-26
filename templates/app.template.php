@@ -130,7 +130,7 @@
         </div>
     </main>
     <footer>
-        <a href="#" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><?php $this->render_locale('github') ?></a>
+        <a href="https://github.com/fosa-framework" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><?php $this->render_locale('github') ?></a>
         <a href="/?lang=en-EN"><i class="fas fa-flag"></i>English</a>
         <a href="/?lang=fr-FR"><i class="fas fa-flag"></i>Français</a>
     </footer>
