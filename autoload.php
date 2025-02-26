@@ -22,34 +22,35 @@
 
 require_once __DIR__ . '/application/vendor/autoload.php';
 
-/* Cores */
+/**
+ * Custom autoload function to automatically load application classes.
+ * This function will search for a class file in the following directories:
+ * - application/
+ * - application/repositories/
+ * - controllers/
+ * - middlewares/
+ */
+spl_autoload_register(function ($class) {
+    // Extract the class name without the namespace
+    $className = basename(str_replace('\\', '/', $class));
 
-require_once __DIR__ . '/application/Router.php';
-require_once __DIR__ . '/application/Locale.php';
-require_once __DIR__ . '/application/Template.php';
-require_once __DIR__ . '/application/Request.php';
-require_once __DIR__ . '/application/Response.php';
-require_once __DIR__ . '/application/Controller.php';
-require_once __DIR__ . '/application/Middleware.php';
-require_once __DIR__ . '/application/Session.php';
-require_once __DIR__ . '/application/Tokenizer.php';
-require_once __DIR__ . '/application/DotEnv.php';
-require_once __DIR__ . '/application/Email.php';
+    // Directories to search for class files
+    $directories = [
+        __DIR__ . '/application/',
+        __DIR__ . '/application/repositories/',
+        __DIR__ . '/controllers/',
+        __DIR__ . '/middlewares/',
+    ];
 
-/* Repositories */
-require_once __DIR__ . '/application/repositories/EntityManager.php';
-require_once __DIR__ . '/application/repositories/Shark.php';
-require_once __DIR__. '/application/repositories/Repository.php';
-require_once __DIR__ . '/application/repositories/UserRepository.php';
-
-/* Controllers */
-require_once __DIR__ . '/controllers/AppController.php';
-require_once __DIR__ . '/controllers/ExampleController.php';
-require_once __DIR__ . '/controllers/AuthController.php';
-
-/* Middlewares */
-require_once __DIR__ . '/middlewares/TokenMiddleware.php';
-require_once __DIR__ . '/middlewares/AuthBasicMiddleware.php';
+    // Loop through directories and include the file if found
+    foreach ($directories as $directory) {
+        $file = $directory . $className . '.php';
+        if (file_exists($file)) {
+            require_once $file;
+            return;
+        }
+    }
+});
 
 /*
  * +-------------------------------------------------+
@@ -59,12 +60,14 @@ require_once __DIR__ . '/middlewares/AuthBasicMiddleware.php';
  * +-------------------------------------------------+
  */
 
+/*
+ * Load environment variables
+ */
+
 use Fosa\Application\DotEnv;
 
 (new DotEnv(__DIR__ . '/.env'))->load();
 
-$APP_NAME = getenv('APP_NAME') || 'Fosa';
-
-$APP_DEFAULT_LANG = getenv('APP_DEFAULT_LANG') || 'en-EN';
-
-$APP_ENV = getenv('APP_ENV') || 'dev';
+$APP_NAME = getenv('APP_NAME') ?: 'Fosa';
+$APP_DEFAULT_LANG = getenv('APP_DEFAULT_LANG') ?: 'en-EN';
+$APP_ENV = getenv('APP_ENV') ?: 'dev';
