@@ -64,9 +64,10 @@ All methods provided by the class `Template` are :
 
 | Methods        | Description           | Results  |
 | ------------- |:-------------:| -----:|
+| `get_app_name()` | Return app name value defined in in `.env` file or `/application/constants/config.php` file.      |    Default `Fosa` |
 | `get_locale()`      | Get the current locale. | `en-EN` or `fr-FR` |
 | `assets($dir, $name)`      | Get URL of assets located in `statics` folder.      |  `/statics/images/Fosa.png`  |
-| `render_locale($key)` | Return translated key based text located in `/application/locales/<locale>/translation.php`      |    `Welcome` or `Bienvenue` |
+| `render_locale($key)` | Return translated key based text located in `/application/locales/<locale>/translation.php`.      |    `Welcome` or `Bienvenue` |
 
 ### Routing
 
