@@ -8,6 +8,11 @@
 
 namespace Fosa\Application;
 
+/**
+ * Class Controller
+ * @package Fosa\Application
+ */
+
 class Controller
 {
     public function __construct($method, Request $request, Response $response) {

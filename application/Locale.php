@@ -8,9 +8,18 @@
 
 namespace Fosa\Application;
 
+/**
+ * Class Locale
+ * @package Fosa\Application
+ */
 
 class Locale
 {
+    /**
+     * The translation array loaded from the translation file.
+     * 
+     * @var array
+     */
     private $translation = [];
 
     public function __construct($locale = 'en-EN')

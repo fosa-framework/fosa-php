@@ -1,12 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 11/02/2022
- * Time: 10:35
- */
-
 namespace Fosa\Application;
+
+/**
+ * Class Tokenizer
+ * This class is responsible for generating, decoding, refreshing, invalidating and checking the validity of tokens.
+ * 
+ * @package Fosa\Application
+ */
 
 require_once __DIR__ . '/Session.php';
 

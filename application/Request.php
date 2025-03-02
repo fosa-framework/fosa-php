@@ -1,12 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 22/12/2021
- * Time: 11:42
- */
 
 namespace Fosa\Application;
+
+/**
+ * Class Request
+ * 
+ * @package Fosa\Application
+ */
+
+use Fosa\Application\Config;
 
 class Request
 {
@@ -99,6 +101,7 @@ class Request
 
     public function getLocale()
     {
-        return isset($_GET['lang']) ? $_GET['lang'] : 'en-EN';
+        $default = (new Config())->get('APP_DEFAULT_LANG');
+        return isset($_GET['lang']) ? $_GET['lang'] : $default;
     }
 }

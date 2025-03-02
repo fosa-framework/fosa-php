@@ -1,12 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 23/12/2021
- * Time: 20:19
- */
 
 namespace Fosa\Application\Repositories;
+
+/**
+ * Class Shark
+ * This class is the base class for all the repositories in the application.
+ * 
+ * @package Fosa\Application\Repositories
+ */
 
 class Shark extends EntityManager
 {

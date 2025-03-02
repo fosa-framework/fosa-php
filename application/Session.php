@@ -1,8 +1,13 @@
 <?php
+
     namespace Fosa\Application;
+
     /**
-     * Session
+     * Class Session
+     * 
+     * @package Fosa\Application
      */
+
     class Session {
         function __construct() {
             if(!session_id()) {
