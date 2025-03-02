@@ -60,11 +60,20 @@ spl_autoload_register(function ($class) {
  * +-------------------------------------------------+
  */
 
+use Fosa\Application\DotEnv;
+use Fosa\Application\ErrorHandler;
+
+// Setting up error handler
+function errorHandler($errno, $errstr, $errfile, $errline)
+{
+    (new ErrorHandler())->init($errno, $errstr, $errfile, $errline);
+}
+
+set_error_handler("errorHandler");
+
 /*
  * Load environment variables
  */
-
-use Fosa\Application\DotEnv;
 
 (new DotEnv(__DIR__ . '/.env'))->load();
 
