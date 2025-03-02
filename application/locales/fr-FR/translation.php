@@ -14,5 +14,10 @@ $translation = [
             'static-website' => 'Créer un site Web statique'
         ],
         'github' => 'Suivez Fosa sur Github'
+    ],
+    '404' => [
+        'title' => 'Page introuvable',
+        'header' => 'Erreur 404: Page introuvable',
+        'description' => 'La page %%path%% que vous essayez d\'atteindre est introuvable.',
     ]
 ];
