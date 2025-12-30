@@ -13,7 +13,6 @@
 namespace Fosa\Installer;
 
 use Composer\Script\Event;
-use Composer\Installer\PackageEvent;
 
 /**
  * ProjectInstaller class
@@ -286,6 +285,7 @@ class ExampleController extends Controller
         ]);
     }
 }
+EOD;
     }
 
     /**
