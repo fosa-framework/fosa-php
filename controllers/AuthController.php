@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 08/06/2022
- * Time: 11:58
- */
 
 namespace Fosa\Controllers;
 
@@ -24,6 +18,7 @@ class AuthController extends Controller
     public function login(Request $request, Response $response)
     {
         $body = $request->getBody();
+        // Handle authentication logic here (e.g., verify username and password)
         return $response->json([
             'data' => $body
         ], 200);
