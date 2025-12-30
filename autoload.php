@@ -18,10 +18,6 @@
  * +---------------------------------+
  */
 
-/* Composer vendor autoload */
-
-require_once __DIR__ . '/core/vendor/autoload.php';
-
 /**
  * Custom autoload function to automatically load core classes.
  * This function will search for a class file in the following directories:
