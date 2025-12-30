@@ -17,4 +17,11 @@ class AppController extends Controller
     {
         return $response->view('app', [], $request->getLocale());
     }
+
+    public function hello(Request $request, Response $response)
+    {
+        return $response->json([
+            'message' => 'Hello, welcome to Fosa PHP Framework!'
+        ]);
+    }
 }
