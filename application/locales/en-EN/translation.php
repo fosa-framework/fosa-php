@@ -14,5 +14,10 @@ $translation = [
             'static-website' => 'Build static Website'
         ],
         'github' => 'Follow Fosa on Github'
+    ],
+    '404' => [
+        'title' => 'Page not found',
+        'header' => 'Error 404: Page not found.',
+        'description' => 'The page %%path%% you are trying to reach cannot be found.',
     ]
 ];

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fosa - Page not found</title>
+    <title><?php $this->get_app_name() ?> - Page not found</title>
     <link rel="apple-touch-icon" sizes="180x180" href="<?php $this->assets('favicon', 'apple-touch-icon.png'); ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php $this->assets('favicon', 'favicon-32x32.png'); ?>">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php $this->assets('favicon', 'favicon-16x16.png'); ?>">
@@ -88,7 +88,7 @@
     </header>
     <main>
         <h1 class="error">Error 500 : Template not found</h1>
-        <p class="description">The template <code><?php echo $data['template']; ?></code> that you want to render in your Controller is not found in template directory.</p>
+        <p class="description">The template <code><?php echo $data['template']; ?></code> that you want to render in your Controller is not found.</p>
     </main>
     <footer>
         <a href="#" target="_blank" rel="noreferrer"><i class="fab fa-github"></i>Fosa PHP Framework beta 0.1 2022</a>

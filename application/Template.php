@@ -1,19 +1,18 @@
 <?php
+namespace Fosa\Application;
+
 /**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 12/02/2022
- * Time: 15:42
+ * Class Template
+ * 
+ * @package Fosa\Application
  */
 
-namespace Fosa\Application;
+use Fosa\Application\Config;
 
 class Template
 {
     protected $locale;
     protected $translation;
-
-    public function __construct() {}
 
     public function render($template, $data, $locale = NULL)
     {
@@ -48,19 +47,30 @@ class Template
         echo $this->locale;
     }
 
-    protected function render_locale($key)
+    protected function get_app_name()
+    {
+        echo (new Config())->get('APP_NAME');
+    }
+
+    protected function render_locale($key, $params = [])
     {
         if(!$key) {
             die('Warning: Template renderLocal:$key can not be null.');
         }
-        echo $this->resolve_object_value($key, $this->translation);
+        echo $this->resolve_object_value($key, $this->translation, $params);
     }
 
-    protected function resolve_object_value($key, $object) {
+    protected function resolve_object_value($key, $object, $params) {
         $value = $object;
         $props = explode('.', $key);
         foreach ($props as $prop) {
             $value = $value->{$prop};
+        }
+        if(count($params) > 0) {
+            $TRANSLATION_PARAM_TOKEN = (new Config())->get('TRANSLATION_PARAM_TOKEN') ?: '%%';
+            foreach ($params as $key => $param) {
+                $value = str_replace($TRANSLATION_PARAM_TOKEN . $key . $TRANSLATION_PARAM_TOKEN   , $param, $value);
+            }
         }
         return $value;
     }

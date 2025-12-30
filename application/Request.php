@@ -1,12 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 22/12/2021
- * Time: 11:42
- */
 
 namespace Fosa\Application;
+
+/**
+ * Class Request
+ * 
+ * @package Fosa\Application
+ */
+
+use Fosa\Application\Config;
 
 class Request
 {
@@ -31,7 +33,11 @@ class Request
     {
         $authorization = self::getHeaders()['Authorization'];
         if(!$authorization) return null;
-        return explode('Bearer ', $authorization)[1];
+        $exploded = explode(' ', $authorization);
+        if(count($exploded) !== 2) return null;
+        list($type, $token) = $exploded;
+        if(trim($type) !== 'Bearer' || strlen(trim($token)) === 0) return null;
+        return $token;
     }
 
     public function getBasicAuth()
@@ -71,7 +77,7 @@ class Request
             $body = $_POST;
         }
         if($key) {
-            if(is_object($body)) $body = $body->$key;
+            if(is_object($body)) $body = property_exists($body, $key) ? $body->$key : null;
             if(is_array($body)) $body = isset($body[$key]) ? $body[$key] : null;
         }
         return $body;
@@ -95,6 +101,7 @@ class Request
 
     public function getLocale()
     {
-        return isset($_GET['lang']) ? $_GET['lang'] : 'en-EN';
+        $default = (new Config())->get('APP_DEFAULT_LANG');
+        return isset($_GET['lang']) ? $_GET['lang'] : $default;
     }
 }

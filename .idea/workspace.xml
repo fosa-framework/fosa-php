@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc827c7-dec3-4e8b-84d5-50df51d11d03" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../templates/template-not-found.template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../application/Template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../application/Template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../application/repositories/TodoRepository.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../controllers/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="e#132#164#0#PHP" expanded="true" />
               </folding>
@@ -42,11 +40,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Router.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../application/Router.php">
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../application/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2720">
-              <caret line="165" column="7" lean-forward="true" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+            <state relative-caret-position="170">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding>
+                <element signature="e#6#101#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DotEnv.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../application/DotEnv.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../autoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="50" column="53" lean-forward="true" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../server/run">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -60,33 +88,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../templates/app.template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="135" column="13" lean-forward="true" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExampleController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../controllers/ExampleController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Response.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../application/Response.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../application/Template.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,20 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-not-found.template.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="template-not-found.template.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="90" column="106" selection-start-line="90" selection-start-column="106" selection-end-line="90" selection-end-column="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Locale.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../application/Locale.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="31" column="85" lean-forward="true" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+            <state relative-caret-position="394">
+              <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -145,7 +137,6 @@
         <option value="$PROJECT_DIR$/../application/locales/en-EN/translation.php" />
         <option value="$PROJECT_DIR$/../application/locales/mg-MG/translation.php" />
         <option value="$PROJECT_DIR$/../application/Local.php" />
-        <option value="$PROJECT_DIR$/../autoload.php" />
         <option value="$PROJECT_DIR$/../application/Request.php" />
         <option value="$PROJECT_DIR$/../application/Controller.php" />
         <option value="$PROJECT_DIR$/../templates/app.template.php" />
@@ -159,8 +150,10 @@
         <option value="$PROJECT_DIR$/../application/Router.php" />
         <option value="$PROJECT_DIR$/../README.md" />
         <option value="$PROJECT_DIR$/../application/Template.php" />
-        <option value="$PROJECT_DIR$/../templates/template-not-found.template.php" />
         <option value="$PROJECT_DIR$/../controllers/AppController.php" />
+        <option value="$PROJECT_DIR$/../server/run" />
+        <option value="$PROJECT_DIR$/../autoload.php" />
+        <option value="$PROJECT_DIR$/../templates/template-not-found.template.php" />
       </list>
     </option>
   </component>
@@ -242,7 +235,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ap&#9;FILE&#9;file://E:/Bossy/Fosa/main/controllers/AppController.php&#10;Rou&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Router.php&#10;Respo&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;Res&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;loa&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;c&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/application/Config.php&#10;hta&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.htaccess&#10;.e&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.env" />
+    <property name="SearchEverywhereHistoryKey" value="aut&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;ap&#9;FILE&#9;file://E:/Bossy/Fosa/main/controllers/AppController.php&#10;Rou&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Router.php&#10;Respo&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;Res&#9;FILE&#9;file://E:/Bossy/Fosa/main/application/Response.php&#10;loa&#9;FILE&#9;file://E:/Bossy/Fosa/main/autoload.php&#10;c&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/application/Config.php&#10;hta&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.htaccess&#10;.e&#9;FILE&#9;file://E:/Bossy/Fosa/projects/fosa-todos/.env" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -282,12 +275,12 @@
       <workItem from="1654707093424" duration="7000" />
       <workItem from="1654763984343" duration="67000" />
       <workItem from="1658295479216" duration="181000" />
-      <workItem from="1664003047310" duration="13059000" />
+      <workItem from="1664003047310" duration="15104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20707000" />
+    <option name="totallyTimeSpent" value="22752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -299,8 +292,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Mongo Explorer" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" visible="true" weight="0.3297414" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" visible="true" weight="0.3297414" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
@@ -331,7 +324,6 @@
     <entry file="file://$PROJECT_DIR$/../controllers/TodoController.php" />
     <entry file="file://E:/CodeIgniter/REJF/.htaccess" />
     <entry file="file://$PROJECT_DIR$/../.htaccess" />
-    <entry file="file://$PROJECT_DIR$/../application/DotEnv.php" />
     <entry file="file://E:/Ceedow/ceedow.fr/application/repositories/EntityManager.php" />
     <entry file="file://E:/Ceedow/ceedow.fr/application/Shark.php" />
     <entry file="file://E:/Ceedow/ceedow.fr/application/Config.php" />
@@ -346,9 +338,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../application/repositories/Shark.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../application/repositories/TodoRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../application/Config.php">
@@ -382,27 +371,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../server/run">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../application/locales/en-EN/translation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../application/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="e#6#101#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -447,13 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="47" column="60" lean-forward="true" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -543,20 +508,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="90" column="106" selection-start-line="90" selection-start-column="106" selection-end-line="90" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../controllers/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding>
             <element signature="e#132#164#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../application/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../server/run">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../application/DotEnv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="50" column="53" lean-forward="true" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../application/repositories/TodoRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/template-not-found.template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
         </state>
       </provider>
     </entry>

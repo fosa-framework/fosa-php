@@ -2,6 +2,11 @@
 
 namespace Fosa\Application;
 
+/**
+ * Class DotEnv
+ * @package Fosa\Application
+ */
+
 class DotEnv
 {
     /**

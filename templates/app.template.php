@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fosa - <?php $this->render_locale('title'); ?></title>
+    <title><?php $this->get_app_name() ?> - <?php $this->render_locale('title'); ?></title>
     <meta name="description" content="<?php $this->render_locale('description'); ?>">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php $this->assets('favicon', 'apple-touch-icon.png'); ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php $this->assets('favicon', 'favicon-32x32.png'); ?>">
@@ -106,22 +106,22 @@
 <body>
 <div class="container">
     <header>
-        <img src="<?php $this->assets('images', 'Fosa.png'); ?>" alt="Fosa">
+        <img src="<?php $this->assets('images', 'Fosa.png') ?>" alt="Fosa">
         <h3 class="app-name">
             Fosa Framework Beta 0.1
         </h3>
     </header>
     <main>
         <h1 class="title"><?php $this->render_locale('main.title') ?></h1>
-        <p class="description"><?php $this->render_locale('main.content'); ?></p>
+        <p class="description"><?php $this->render_locale('main.content') ?></p>
         <div class="cards">
             <div class="card">
                 <i class="fas fa-globe"></i>
-                <span><?php $this->render_locale('features.web-app'); ?></span>
+                <span><?php $this->render_locale('features.web-app') ?></span>
             </div>
             <div class="card">
                 <i class="fas fa-cogs"></i>
-                <span><?php $this->render_locale('features.rest-api'); ?></span>
+                <span><?php $this->render_locale('features.rest-api') ?></span>
             </div>
             <div class="card">
                 <i class="fas fa-box"></i>
@@ -130,7 +130,7 @@
         </div>
     </main>
     <footer>
-        <a href="#" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><?php $this->render_locale('github') ?></a>
+        <a href="https://github.com/fosa-framework" target="_blank" rel="noreferrer"><i class="fab fa-github"></i><?php $this->render_locale('github') ?></a>
         <a href="/?lang=en-EN"><i class="fas fa-flag"></i>English</a>
         <a href="/?lang=fr-FR"><i class="fas fa-flag"></i>Français</a>
     </footer>

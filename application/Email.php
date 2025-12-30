@@ -6,8 +6,18 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+/**
+ * Class Email
+ * @package Fosa\Application
+ */
+
 class Email
 {
+    /**
+     * PHPMailer instance
+     * 
+     * @var PHPMailer
+     */
     private $mail;
 
     function __construct()

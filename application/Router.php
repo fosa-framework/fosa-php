@@ -1,12 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 21/12/2021
- * Time: 12:43
- */
-
 namespace Fosa\Application;
+
+/**
+ * Class Router
+ * 
+ * @package Fosa\Application
+ */
 
 class Router
 {
@@ -155,7 +154,7 @@ class Router
         $response->view('404', [
             'method' => $request->getMethod(),
             'path' => $request->getPath(),
-        ]);
+        ], $request->getLocale());
     }
 
     /**
