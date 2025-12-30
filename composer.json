@@ -37,7 +37,8 @@
             "Fosa\\Installer\\ProjectInstaller::install"
         ],
         "post-install-cmd": [
-            "Fosa\\Installer\\ProjectInstaller::checkEnv"
+            "Fosa\\Installer\\ProjectInstaller::checkEnv",
+            "Fosa\\Installer\\ProjectInstaller::cleanupInstallationFiles"
         ]
     }
 }

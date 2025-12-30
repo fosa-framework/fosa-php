@@ -388,4 +388,51 @@ EOD;
 </IfModule>
 EOD;
     }
+
+    /**
+     * Clean up installation files and directories after installation
+     * This method removes the entire src folder which contains the installer
+     *
+     * @param Event $event The Composer event (optional)
+     * @return void
+     */
+    public static function cleanupInstallationFiles($event = null)
+    {
+        $projectRoot = getcwd();
+        
+        $srcDir = $projectRoot . '/src';
+        
+        if (is_dir($srcDir)) {
+            self::removeDirectory($srcDir);
+            if ($event && method_exists($event, 'getIO')) {
+                $event->getIO()->write('<info>✓ Removed installation directory: src/</info>');
+            }
+        }
+    }
+
+    /**
+     * Recursively remove a directory and all its contents
+     *
+     * @param string $dir Directory path to remove
+     * @return void
+     */
+    private static function removeDirectory($dir)
+    {
+        if (!is_dir($dir)) {
+            return;
+        }
+
+        $files = array_diff(scandir($dir), ['.', '..']);
+        
+        foreach ($files as $file) {
+            $path = $dir . '/' . $file;
+            if (is_dir($path)) {
+                self::removeDirectory($path);
+            } else {
+                @unlink($path);
+            }
+        }
+        
+        @rmdir($dir);
+    }
 }
