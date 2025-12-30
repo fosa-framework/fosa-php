@@ -2,7 +2,7 @@
 
 require __DIR__ . '/autoload.php';
 
-use Fosa\Application\Router;
+use Fosa\Core\Router;
 use Fosa\Controllers\AppController;
 use Fosa\Controllers\ExampleController;
 use Fosa\Controllers\AuthController;

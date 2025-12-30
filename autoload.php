@@ -20,13 +20,13 @@
 
 /* Composer vendor autoload */
 
-require_once __DIR__ . '/application/vendor/autoload.php';
+require_once __DIR__ . '/core/vendor/autoload.php';
 
 /**
- * Custom autoload function to automatically load application classes.
+ * Custom autoload function to automatically load core classes.
  * This function will search for a class file in the following directories:
- * - application/
- * - application/repositories/
+ * - core/
+ * - core/repositories/
  * - controllers/
  * - middlewares/
  */
@@ -36,12 +36,12 @@ spl_autoload_register(function ($class) {
 
     // Directories to search for class files
     $directories = [
-        __DIR__ . '/application/',
-        __DIR__ . '/application/database/',
-        __DIR__ . '/application/database/drivers/',
-        __DIR__ . '/application/repositories/',
-        __DIR__ . '/controllers/',
-        __DIR__ . '/middlewares/',
+        __DIR__ . '/core/',
+        __DIR__ . '/core/database/',
+        __DIR__ . '/core/database/drivers/',
+        __DIR__ . '/core/repositories/',
+        __DIR__ . '/app/controllers/',
+        __DIR__ . '/app/middlewares/',
     ];
 
     // Loop through directories and include the file if found
@@ -62,8 +62,8 @@ spl_autoload_register(function ($class) {
  * +-------------------------------------------------+
  */
 
-use Fosa\Application\DotEnv;
-use Fosa\Application\ErrorHandler;
+use Fosa\Core\DotEnv;
+use Fosa\Core\ErrorHandler;
 
 // Setting up error handler
 function errorHandler($errno, $errstr, $errfile, $errline)

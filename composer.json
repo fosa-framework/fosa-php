@@ -1,2 +1,43 @@
 {
+    "name": "fosa-framework/fosa",
+    "description": "Fosa is a lightweight and elegant PHP web framework for endemic developers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mendrika Rabeh",
+            "email": "frabehevitra@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "phpmailer/phpmailer": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fosa\\": "src/Fosa/",
+            "Fosa\\Core\\": "core/",
+            "Fosa\\Controllers\\": "app/controllers/",
+            "Fosa\\Middlewares\\": "app/middlewares/"
+        },
+        "files": [
+            "src/Fosa/constants/config.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "Fosa\\Installer\\ProjectInstaller::install"
+        ],
+        "post-install-cmd": [
+            "Fosa\\Installer\\ProjectInstaller::checkEnv"
+        ]
+    }
 }
