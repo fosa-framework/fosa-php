@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 11/02/2022
- * Time: 10:17
- */
 
 namespace Fosa\Middlewares;
 

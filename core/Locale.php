@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 24/09/2022
- * Time: 10:10
- */
-
 namespace Fosa\Core;
 
 /**

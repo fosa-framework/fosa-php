@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: R. Finoana Mendrika
- * Date: 21/12/2021
- * Time: 12:19
- */
 
 namespace Fosa\Core;
 
