@@ -108,7 +108,7 @@
     <header>
         <img src="<?php $this->assets('images', 'Fosa.png') ?>" alt="Fosa">
         <h3 class="app-name">
-            Fosa Framework Beta 0.1
+            Fosa Framework Pre-release v0.1
         </h3>
     </header>
     <main>
