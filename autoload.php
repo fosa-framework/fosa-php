@@ -37,6 +37,8 @@ spl_autoload_register(function ($class) {
     // Directories to search for class files
     $directories = [
         __DIR__ . '/application/',
+        __DIR__ . '/application/database/',
+        __DIR__ . '/application/database/drivers/',
         __DIR__ . '/application/repositories/',
         __DIR__ . '/controllers/',
         __DIR__ . '/middlewares/',

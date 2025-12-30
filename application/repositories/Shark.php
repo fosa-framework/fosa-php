@@ -2,6 +2,8 @@
 
 namespace Fosa\Application\Repositories;
 
+use Fosa\Application\Database\DatabaseFactory;
+
 /**
  * Class Shark
  * This class is the base class for all the repositories in the application.
@@ -24,25 +26,34 @@ class Shark extends EntityManager
     public function __construct($table)
     {
         $this->table = $table;
-        parent::__construct(getenv('DB_NAME'), getenv('DB_USERNAME'), getenv('DB_PASSWORD'), 'Shark::' . $this->table);
+        $config = [
+            'driver' => getenv('DB_DRIVER'),
+            'host' => getenv('DB_HOST'),
+            'port' => getenv('DB_PORT'),
+            'database' => getenv('DB_NAME'),
+            'username' => getenv('DB_USERNAME'),
+            'password' => getenv('DB_PASSWORD'),
+        ];
+        $driver = DatabaseFactory::createConnection($config, 'Shark::' . $this->table);
+        parent::__construct($driver);
     }
 
     protected function findAll()
     {
         $this->result = $this->select()->from($this->table)->where(1)->build()->run();
-        return $this;
+        return self::result();
     }
 
     protected function filter($columns, $params)
     {
         $this->result = $this->select($columns)->from($this->table)->where($params)->build()->run();
-        return $this;
+        return self::result();
     }
 
     protected function store($params)
     {
         $this->result = $this->insert()->into($this->table, $params)->values($params)->build()->run();
-        return $this;
+        return self::result();
     }
 
     protected function result()
