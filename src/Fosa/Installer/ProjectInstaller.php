@@ -354,7 +354,7 @@ EOD;
     <div class="container">
         <h1><?php echo isset($title) ? htmlspecialchars($title) : 'Fosa Framework'; ?></h1>
         <p><?php echo isset($message) ? htmlspecialchars($message) : 'Welcome!'; ?></p>
-        <span class="badge">v1.0</span>
+        <span class="badge">v0.1</span>
     </div>
 </body>
 </html>
