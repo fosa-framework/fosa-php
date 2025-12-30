@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: R. Finoana Mendrika
@@ -38,7 +39,7 @@ class Locale
             die('Warning : Locale translation key can not be null');
         }
         if (!isset($this->translation[$key])) {
-            die('Warning : Locale translation key is not set in translation array.');
+            return NULL;
         }
         return $this->recursive_convert_array_to_obj($this->translation[$key]);
     }
