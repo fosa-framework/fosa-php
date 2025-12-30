@@ -286,7 +286,6 @@ class ExampleController extends Controller
         ]);
     }
 }
-EOD;
     }
 
     /**
@@ -390,4 +389,3 @@ EOD;
 EOD;
     }
 }
-EOD;
