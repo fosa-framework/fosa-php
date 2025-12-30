@@ -276,7 +276,7 @@ class ExampleController extends Controller
      */
     public function show(Request $request, Response $response)
     {
-        $id = $request->getParam('id');
+        $id = $request->getParams('id');
         
         return $response->json([
             'status' => 'success',
