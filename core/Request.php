@@ -32,18 +32,18 @@ class Request
     public function getBearerToken()
     {
         $authorization = self::getHeaders()['Authorization'];
-        if(!$authorization) return null;
+        if (!$authorization) return null;
         $exploded = explode(' ', $authorization);
-        if(count($exploded) !== 2) return null;
+        if (count($exploded) !== 2) return null;
         list($type, $token) = $exploded;
-        if(trim($type) !== 'Bearer' || strlen(trim($token)) === 0) return null;
+        if (trim($type) !== 'Bearer' || strlen(trim($token)) === 0) return null;
         return $token;
     }
 
     public function getBasicAuth()
     {
         $authorization = self::getHeaders()['Authorization'];
-        if(!$authorization) return null;
+        if (!$authorization) return null;
         return explode('Basic ', $authorization)[1];
     }
 
@@ -62,23 +62,26 @@ class Request
         return explode('?', $this->uri)[0];
     }
 
-    public function getParams()
+    public function getParams($key = null)
     {
+        if ($key) {
+            return isset($_GET[$key]) ? $_GET[$key] : null;
+        }
         return $_GET;
     }
 
     public function getBody($key = null)
     {
         $body = null;
-        if(self::getHeaders()['Content-Type'] === 'application/json') {
+        if (self::getHeaders()['Content-Type'] === 'application/json') {
             $json = file_get_contents('php://input');
             $body = json_decode($json);
         } else {
             $body = $_POST;
         }
-        if($key) {
-            if(is_object($body)) $body = property_exists($body, $key) ? $body->$key : null;
-            if(is_array($body)) $body = isset($body[$key]) ? $body[$key] : null;
+        if ($key) {
+            if (is_object($body)) $body = property_exists($body, $key) ? $body->$key : null;
+            if (is_array($body)) $body = isset($body[$key]) ? $body[$key] : null;
         }
         return $body;
     }
@@ -86,11 +89,10 @@ class Request
     public function filter($keys)
     {
         $body = self::getBody();
-        if($body) {
+        if ($body) {
             $result = [];
-            foreach ($keys as $key)
-            {
-                if(isset($body[$key])) {
+            foreach ($keys as $key) {
+                if (isset($body[$key])) {
                     $result[$key] = $body[$key];
                 }
             }
