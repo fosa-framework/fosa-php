@@ -1,9 +1,9 @@
 <?php
 
-require __DIR__ . '/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Fosa\Core\Router;
-use Fosa\Controllers\AppController;
+use App\Controllers\AppController;
 // Uncomment the following line to add more controller examples
 // use Fosa\Controllers\ExampleController;
 

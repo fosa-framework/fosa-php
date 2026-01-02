@@ -1,7 +1,7 @@
 <?php
-require_once dirname(__DIR__) . '/core/DotEnv.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
 
-use \Fosa\Core\DotEnv;
+use Fosa\Core\DotEnv;
 
 (new DotEnv(dirname(__DIR__) . '/.env'))->load();
 

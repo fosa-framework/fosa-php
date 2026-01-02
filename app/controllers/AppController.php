@@ -1,6 +1,6 @@
 <?php
 
-namespace Fosa\Controllers;
+namespace App\Controllers;
 
 use Fosa\Core\Controller;
 use Fosa\Core\Request;

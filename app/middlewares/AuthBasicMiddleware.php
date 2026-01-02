@@ -1,6 +1,6 @@
 <?php
 
-namespace Fosa\Middlewares;
+namespace App\Middlewares;
 
 use Fosa\Core\Middleware;
 use Fosa\Core\Request;
