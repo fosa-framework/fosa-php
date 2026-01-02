@@ -27,6 +27,7 @@
     }
   },
   "scripts": {
+    "serve": "php server/run",
     "post-create-project-cmd": [
       "Fosa\\Installer\\ProjectInstaller::install"
     ],
