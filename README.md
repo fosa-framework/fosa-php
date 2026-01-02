@@ -103,10 +103,39 @@ Create a file `app/templates/your-view.template.php`:
     <title>My Page</title>
 </head>
 <body>
-    <h1><?php echo htmlspecialchars($message); ?></h1>
+    <h1><?php echo htmlspecialchars($data['message']); ?></h1>
 </body>
 </html>
 ```
+
+All methods provided by the class `Template` are :
+
+| Methods        | Description           | Results  |
+| ------------- |:-------------:| -----:|
+| `get_app_name()` | Return app name value defined in in `.env` file or `/application/constants/config.php` file.      |    Default `Fosa` |
+| `get_locale()`      | Get the current locale. | `en-EN` or `fr-FR` |
+| `assets($dir, $name)`      | Get URL of assets located in `statics` folder.      |  `/statics/images/Fosa.png`  |
+| `render_locale($key)` | Return translated key based text located in `/application/locales/<locale>/translation.php`.      |    `Welcome` or `Bienvenue` |
+
+### Routing
+
+The routing configuration is in file `index.php` located in at the root project directory, you can easily register new route by using `Router` instance `$router` :
+
+```php
+...
+
+use Fosa\Controllers\YourController;
+
+$router = new Router();
+
+/* WEB routes */
+...
+$router->route('/my-controller', 'GET', YourController::class);
+
+...
+```
+
+And the, you can access to your URL `http://localhost:8085/my-controller` .
 
 ## Directory Structure
 
@@ -190,14 +219,39 @@ $router->add('POST', '/users', 'UserController@store');
 Create middleware in `app/middlewares/`:
 
 ```php
-class AuthMiddleware implements MiddlewareInterface
+class AuthBasicMiddleware extends Middleware
 {
-    public function handle(Request $request, Response $response)
+    private $request;
+    private $response;
+
+    public function __construct(Request $request, Response $response)
     {
-        if (!$request->isAuthenticated()) {
-            return $response->redirect('/login');
+        $this->request = $request;
+        $this->response = $response;
+    }
+
+    public function passport()
+    {
+        return self::validateAuth($this->request->getBasicAuth());
+    }
+
+    public function throwMiddlewareException()
+    {
+        return $this->response->json([
+            'error' => 'Passport not validated by middleware',
+            'stack' => self::class
+        ], 400);
+    }
+
+    private function validateAuth($auth)
+    {
+        if(!$auth) return null;
+        $auth_arr = explode(':', base64_decode($auth));
+        if(!empty($auth_arr)) {
+            list ($username, $password) = $auth_arr;
+            return $username === 'admin' && $password === 'admin';
         }
-        return null;
+        return false;
     }
 }
 ```
@@ -244,100 +298,3 @@ Email: frabehevitra@gmail.com
 ---
 
 Made with ❤️ for developers who love simplicity and elegance.
-
-Use the `git clone` command to clone current repository or download directly source code. Release version will be updated soon.
-
-## Launch
-
-To start your Fosa app server, type the following command on your console:
-
-```bash
-php server/run
-```
-
-Note : The server will run at `localhost` on port `8085` but you can change this by editing `R_HOST` and `R_PORT` in *.env* file in the root directory of your app.
-
-## Documentation
-
-### Controllers
-The create a new controller, open the folder located at `controllers` and create a new PHP class file in. Then to configure the controller as shown in the bellow :
-
-```php
-namespace Fosa\Controllers;
-
-use Fosa\Core\Controller;
-use Fosa\Core\Request;
-use Fosa\Core\Response;
-
-class MyFosaController extends Controller
-{
-    public function __construct($method, Request $request, Response $response)
-    {
-        parent::__construct($method, $request, $response);
-    }
-
-    public function index(Request $request, Response $response)
-    {
-        return $response->view('fosa', [
-            'message' => 'Hello, World!',
-            'random' => 'Some data passed to the view.'
-        ]);
-    }
-}
-```
-
-Then, now we are going to create the view `fosa`.
-
-### Templates
-
-View in Fosa Framework is located at `templates`. Templates are renderer by a class named `Template`, the class provides too some methods that will be usable in the template file. To create a new template, we are going to create a file named `fosa.template.php` :
-
-```php
-echo $data['message'];
-echo $data['random'];
-```
-
-All methods provided by the class `Template` are :
-
-| Methods        | Description           | Results  |
-| ------------- |:-------------:| -----:|
-| `get_app_name()` | Return app name value defined in in `.env` file or `/application/constants/config.php` file.      |    Default `Fosa` |
-| `get_locale()`      | Get the current locale. | `en-EN` or `fr-FR` |
-| `assets($dir, $name)`      | Get URL of assets located in `statics` folder.      |  `/statics/images/Fosa.png`  |
-| `render_locale($key)` | Return translated key based text located in `/application/locales/<locale>/translation.php`.      |    `Welcome` or `Bienvenue` |
-
-### Routing
-
-The routing configuration is in file `index.php` located in at the root project directory, you can easily register new route by using `Router` instance `$router` :
-
-```php
-...
-
-use Fosa\Controllers\MyFosaController;
-
-$router = new Router();
-
-/* WEB routes */
-...
-$router->route('/my-fosa-controller', 'GET', MyFosaController::class);
-
-...
-```
-
-And the, you can access to your URL `http://localhost:8085/my-fosa-controller` .
-## Issues
-
-Somme features are not ready in this beta version of the app, please tell us if you have an issue. And don't forget that Fosa is community open project.
-
-## Contribution
-
-FOsa is an OpenSource project, any contribution would be welcomed with joy. For major changes, please contact the authors of the project.
-
-## Creator
-
-Fosa is an project started by Malagasy young developer. Meet the creator and don't forgot to follow for new features.
-
-[Finoana Mendrika](https://github.com/finoanamendrika)
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
