@@ -1,4 +1,4 @@
-![Fosa](./static/favicon/favicon.ico?raw=true)
+![Fosa](./public/favicon/favicon.ico?raw=true)
 
 # Fosa Framework
 
