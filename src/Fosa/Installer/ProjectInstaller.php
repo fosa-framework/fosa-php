@@ -48,7 +48,7 @@ class ProjectInstaller
         $io->write('<info>✓ Fosa Framework installation completed successfully!</info>');
         $io->write('<comment>Next steps:</comment>');
         $io->write('1. Configure your .env file with your database and application settings');
-        $io->write('2. Create your first controller in app/controllers/');
+        $io->write('2. Create your first controller in app/Controllers/');
         $io->write('3. Run: php server/run to start the development server');
     }
 
@@ -115,10 +115,10 @@ class ProjectInstaller
     private static function createDirectories($projectRoot, $io)
     {
         $directories = [
-            '/app/controllers',
-            '/app/middlewares',
-            '/app/templates',
-            '/app/models',
+            '/app/Controllers',
+            '/app/Middlewares',
+            '/app/Templates',
+            '/app/Models',
             '/storage/logs',
             '/storage/cache',
             '/public',
@@ -145,7 +145,7 @@ class ProjectInstaller
     {
         // Create example controller
         $controllerTemplate = self::getExampleControllerTemplate();
-        $controllerPath = $projectRoot . '/app/controllers/ExampleController.php';
+        $controllerPath = $projectRoot . '/app/Controllers/ExampleController.php';
         
         if (!file_exists($controllerPath)) {
             file_put_contents($controllerPath, $controllerTemplate);
@@ -154,7 +154,7 @@ class ProjectInstaller
 
         // Create example template
         $templateTemplate = self::getExampleTemplateTemplate();
-        $templatePath = $projectRoot . '/app/templates/example.template.php';
+        $templatePath = $projectRoot . '/app/Templates/example.template.php';
         
         if (!file_exists($templatePath)) {
             file_put_contents($templatePath, $templateTemplate);
@@ -163,7 +163,7 @@ class ProjectInstaller
 
         // Create .htaccess for Apache
         $htaccessTemplate = self::getHtaccessTemplate();
-        $htaccessPath = $projectRoot . '/public/.htaccess';
+        $htaccessPath = $projectRoot . '/.htaccess';
         
         if (!file_exists($htaccessPath)) {
             file_put_contents($htaccessPath, $htaccessTemplate);
@@ -227,7 +227,7 @@ EOD;
         return <<<'EOD'
 <?php
 
-namespace Fosa\Controllers;
+namespace App\Controllers;
 
 use Fosa\Core\Controller;
 use Fosa\Core\Request;
