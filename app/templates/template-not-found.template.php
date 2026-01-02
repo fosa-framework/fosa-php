@@ -29,7 +29,7 @@
             padding: 0;
             margin: 0;
             min-width: 100vh;
-            background-color: var(--primary);=
+            background-color: var(--primary);
         }
         .container {
             max-width: 650px;
