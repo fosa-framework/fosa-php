@@ -65,12 +65,12 @@ The server will run at `http://localhost:8085` (configurable via `.env`)
 
 ### Creating Your First Controller
 
-Create a file `app/controllers/YourController.php`:
+Create a file `app/Controllers/YourController.php`:
 
 ```php
 <?php
 
-namespace Fosa\Controllers;
+namespace App\Controllers;
 
 use Fosa\Core\Controller;
 use Fosa\Core\Request;
@@ -94,7 +94,7 @@ class YourController extends Controller
 
 ### Creating a View Template
 
-Create a file `app/templates/your-view.template.php`:
+Create a file `app/Templates/your-view.template.php`:
 
 ```php
 <!DOCTYPE html>
@@ -142,10 +142,10 @@ And the, you can access to your URL `http://localhost:8085/my-controller` .
 ```
 my-app/
 ├── app/
-│   ├── controllers/          # Your application controllers
-│   ├── middlewares/          # Custom middleware
-│   ├── models/               # Data models
-│   └── templates/            # View templates
+│   ├── Controllers/          # Your application controllers
+│   ├── Middlewares/          # Custom middleware
+│   ├── Models/               # Data models
+│   └── Templates/            # View templates
 ├── src/
 │   └── Fosa/                 # Framework core classes
 ├── public/                   # Public web root (for .htaccess)
@@ -203,16 +203,6 @@ The framework uses the following external packages:
 All dependencies are automatically installed via Composer.
 
 ## Usage Examples
-
-### Routing
-
-Routes are typically defined in your router configuration:
-
-```php
-$router->add('GET', '/', 'HomeController@index');
-$router->add('GET', '/users/:id', 'UserController@show');
-$router->add('POST', '/users', 'UserController@store');
-```
 
 ### Middleware
 
